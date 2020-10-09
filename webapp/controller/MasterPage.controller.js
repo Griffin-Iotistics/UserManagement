@@ -73,7 +73,7 @@ sap.ui.define([
 		},
 		_getTotalUserCount: function () {
 
-			var url = "/VIVOIDP/scim/Users?count=0";
+			var url = "/IDP-anz0n9puk/service/scim/Users?count=0";
 			$.ajax({
 				url: url,
 				success: this.onUserCountSuccess.bind(this),
@@ -96,7 +96,7 @@ sap.ui.define([
 			// });
 		},
 		_getUsers: function (startIndex, count) {
-			var url = "/VIVOIDP/scim/Users?startIndex=" + startIndex + "&count=" + count;
+			var url = "/IDP-anz0n9puk/service/scim/Users?startIndex=" + startIndex + "&count=" + count;
 			$.ajax({
 				url: url,
 				success: this.onUserReadSuccess.bind(this),
@@ -208,7 +208,7 @@ sap.ui.define([
 			}
 			
 			// /VIVOIDP/scim/Users?filter=emails eq "EmailExample"
-			var url = "/VIVOIDP/scim/Users?filter=" + param1 + " eq " + param2;
+			var url = "/IDP-anz0n9puk/service/scim/Users?filter=" + param1 + " eq " + param2;
 			$.ajax({
 				url: url,
 				success: this.onFilterSearchSuccess.bind(this),
@@ -326,7 +326,7 @@ sap.ui.define([
 				data.mailVerified = "true";
 				data.userName = data.name.givenName;
 				$.ajax({
-					url: '/VIVOIDP/scim/Users',
+					url: '/IDP-anz0n9puk/service/scim/Users',
 					type: 'POST',
 					data: JSON.stringify(data),
 					success: this.createUserSuccess.bind(this),
@@ -386,7 +386,7 @@ sap.ui.define([
 
 		},
 		_getUsersOnScroll: function (startIndex, count) {
-			var url = "/VIVOIDP/scim/Users?startIndex=" + startIndex + "&count=" + count;
+			var url = "/IDP-anz0n9puk/scim/Users?startIndex=" + startIndex + "&count=" + count;
 			$.ajax({
 				url: url,
 				success: this.onUserScrollReadSuccess.bind(this),
