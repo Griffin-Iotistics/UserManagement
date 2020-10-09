@@ -1,0 +1,9 @@
+[{
+	"ID": "1",
+	"Function": "Assign User Group",
+	"Value": "Assign User Group"
+}, {
+	"ID": "2",
+	"Function": "Remove User Group",
+	"Value": "Remove User Group"
+}]

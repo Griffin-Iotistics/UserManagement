@@ -1,0 +1,75 @@
+/* Enter your custom styles here */
+
+
+/*.SwitchClass .sapMSwt {*/
+
+
+/*    width: 6rem;*/
+
+
+/*}*/
+
+
+/*.SwitchClass .sapMSwtLabel {*/
+
+
+/*    display: block;*/
+
+
+/*    white-space: nowrap;*/
+
+
+/*    text-decoration: none;*/
+
+
+/*    overflow: hidden;*/
+
+
+/*    width: 3.875rem;*/
+
+
+/*    padding: 0 0.1875rem;*/
+
+
+/*    text-transform: uppercase;*/
+
+
+/*    line-height: inherit;*/
+
+
+/*}*/
+
+.SwitchClass .sapMSwt {
+    width: 100px;
+}
+
+.SwitchClass .sapMSwtOn div.sapMSwtHandle {
+    left: 70px;
+}
+
+.SwitchClass .sapMSwtTextOff .sapMSwtLabel {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    width: 3.875rem;
+    padding: 0 0.1875rem;
+    text-transform: uppercase;
+    line-height: inherit;
+}
+
+.SwitchClass .sapMSwtTextOn .sapMSwtLabel {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    width: 2.875rem;
+    padding: 0 0.1875rem;
+    text-transform: uppercase;
+    line-height: inherit;
+}
+
+/* Added by Farooq on 17th Feb 2019*/
+.ToolbarContent {
+    display: contents !important;
+}

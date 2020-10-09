@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.usr.managementv2.controller.NotFound" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<Page showFooter="true" title="{i18n>NotFound}">
+		<MessagePage  text="{i18n>NotFound.text}" showHeader="false"/>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

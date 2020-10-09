@@ -1,0 +1,106 @@
+[{
+	"ID": "1",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99991",
+	"UserGroup": "MU_1048887_SHOP",
+	"description": "Emeralda Service Station - SHOP"
+}, {
+	"ID": "2",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99991",
+	"UserGroup": "GH_1091160_QM",
+	"description": "Santa Maria Shell S/s - QM"
+}, {
+	"ID": "3",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99991",
+	"UserGroup": "KE_1031389_SHOP",
+	"description": "ARGWINGS CONSIGNMENT DEPOT - SHOP"
+}, {
+	"ID": "4",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99992",
+	"UserGroup": "KE_1033342_SITE",
+	"description": "ENTERPRISE RD SERVICE STATION - SITE"
+}, {
+	"ID": "5",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99992",
+	"UserGroup": "TN_1334397_SITE",
+	"description": "Monastir Rte Aeroport"
+}, {
+	"ID": "6",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99992",
+	"UserGroup": "CI_1091976_SITE",
+	"description": "Latrille A S/s - SITE"
+}, {
+	"ID": "7",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99993",
+	"UserGroup": "CV_9999985_SHOP",
+	"description": "Fazenda - SHOP"
+}, {
+	"ID": "8",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99993",
+	"UserGroup": "MA_1333029_SITE",
+	"description": "User group for Merchouch Ap"
+}, {
+	"ID": "9",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99993",
+	"UserGroup": "CI_1090779_SITE",
+	"description": "Mankono - SITE"
+}, {
+	"ID": "10",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99994",
+	"UserGroup": "CI_1091972_SHOP",
+	"description": "Autoroute Du Nord S/ss - SHOP"
+}, {
+	"ID": "11",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99994",
+	"UserGroup": "CI_1091211_SHOP",
+	"description": "Do Tiébissou - SHOP"
+}, {
+	"ID": "12",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99994",
+	"UserGroup": "BF_1091902_QM",
+	"description": "Sankariare"
+}, {
+	"ID": "13",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99995",
+	"UserGroup": "UG_1013255_SITE",
+	"description": "SHELL KITOVU - SITE"
+}, {
+	"ID": "14",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99995",
+	"UserGroup": "BF_1091918_SITE",
+	"description": "Koulouba - SITE"
+}, {
+	"ID": "15",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99995",
+	"UserGroup": "KE_1033326_QM",
+	"description": "KARIOBANGI NORTH SERVICE STATION - QM"
+}, {
+	"ID": "16",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99996",
+	"UserGroup": "KE_1033338_QM",
+	"description": "BIDII SERVICE STATION ABDIRIZAK - QM"
+}, {
+	"ID": "17",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99996",
+	"UserGroup": "BW_DM1",
+	"description": "Disctrict Sales Manager for Botswana"
+}, {
+	"ID": "18",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99996",
+	"UserGroup": "UG_1012988_SITE",
+	"description": "SHELL ARUA HIGHWAY - SITE"
+}, {
+	"ID": "19",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99997",
+	"UserGroup": "KE_1033417_SHOP",
+	"description": "CHEMALUK SERVICE STATION - SHOP"
+}, {
+	"ID": "20",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99997",
+	"UserGroup": "GN_1091257_QM",
+	"description": "Kissidougou Cabral - QM"
+}, {
+	"ID": "21",
+	"___FK_447d97faa7bb957f129101f5_00010": "P99997",
+	"UserGroup": "MA_1333075_SHOP",
+	"description": "User group for MA_1333075_SHOP"
+}]

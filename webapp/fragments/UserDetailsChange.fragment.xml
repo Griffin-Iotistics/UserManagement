@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+			adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				
+				<Label class="sapUiSmallMarginTop" text="{i18n>firstName}"/>
+				<Input maxLength="50" valueStateText="{i18n>invalidNameEntry}" change="_onFirstNameChangeValidate" value="{/userDetails/name/givenName}"/>
+				<Label class="sapUiSmallMarginTop" text="{i18n>lastName}"/>
+				<Input maxLength="50" valueStateText="{i18n>invalidNameEntry}" change="_onFamilyNameChangeValidate" value="{/userDetails/name/familyName}"/>
+				<Label  text="{i18n>loginName}"/>
+				<Text  text="{parts:['/userDetails/name/givenName','/userDetails/name/familyName'], formatter:'.onLoginNameFormatter'}"/>
+				<!--<Input value="{/userDetails/displayName}"/>-->
+				<Label class="sapUiSmallMarginTop" text="{i18n>email}"/>
+				<Input maxLength="100" valueStateText="{i18n>invalidEmailEntry}" change="_onEmailChangeValidate" type="Email" value="{/userDetails/emails/0/value}"/>
+				<Label class="sapUiSmallMarginTop" text="{i18n>userId}"/>
+				<Text class="sapUiSmallMarginTop" text="{/userDetails/id}"/>
+				<Label class="sapUiSmallMarginTop" text="{i18n>status}"/>
+				<Switch state="{/userDetails/active}" customTextOn="Active" customTextOff="Inactive" enabled="true" class="SwitchClass">
+					<layoutData>
+						<FlexItemData growFactor="1"/>
+					</layoutData>
+				</Switch>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

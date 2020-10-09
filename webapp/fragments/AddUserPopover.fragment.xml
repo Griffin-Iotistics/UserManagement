@@ -1,0 +1,82 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<ResponsivePopover contentHeight="auto" contentWidth="auto" horizontalScrolling="true" modal="false" offsetX="0" offsetY="0"
+		placement="Right" showHeader="true" title="New User" verticalScrolling="true" visible="true" showCloseButton="true">
+		<content>
+			<form:Form width="100%" editable="true" visible="true">
+				<!--<form:title>-->
+				<!--    <core:Title text="User Details" level="Auto"/>-->
+				<!--</form:title>-->
+				<form:formContainers>
+					<form:FormContainer visible="true">
+						<form:formElements>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="{i18n>firstName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<Input maxLength="32" id="givenNameId" change="_onFirstNameChangeValidate" type="Text" value="{createModel>/name/givenName}"
+										showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+										valueStateText="{i18n>invalidNameEntry}" liveChange="fnInputValidation"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="{i18n>lastName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<Input maxLength="64" id="givenFamilyId" change="_onFamilyNameChangeValidate" type="Text" value="{createModel>/name/familyName}"
+										showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+										valueStateText="{i18n>invalidNameEntry}" liveChange="fnInputValidation"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="{i18n>email}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<Input maxLength="99" id="emailId" change="_onEmailChangeValidate" type="Text" value="{createModel>/emails/0/value}" showValueHelp="false"
+										enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="{i18n>invalidEmailEntry}"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="{i18n>status}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" selectedKey="{createModel>/active}" maxWidth="100%">
+										<items>
+											<core:Item text="Active" enabled="true" key="Active"/>
+											<core:Item text="Inactive" enabled="true" key="Inactive"/>
+										</items>
+									</ComboBox>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="{i18n>loginName}" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<!--<Input type="Text" value="{createModel>/displayName}" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="{i18n>invalidEntry}" />-->
+									<Text text="{parts:['createModel>/name/givenName','createModel>/name/familyName'], formatter:'.onLoginNameFormatter'}"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+						<form:title/>
+					</form:FormContainer>
+				</form:formContainers>
+				<form:layout>
+					<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+				</form:layout>
+			</form:Form>
+		</content>
+		<beginButton>
+			<Button id="saveUserBtn" text="{i18n>saveUser}" type="Accept" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onUserSavePress"/>
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onUserCancel"/>
+		</endButton>
+		<subHeader/>
+	</ResponsivePopover>
+</core:FragmentDefinition>

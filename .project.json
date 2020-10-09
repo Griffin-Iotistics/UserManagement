@@ -1,0 +1,40 @@
+{
+	"dataBinding": {
+		"/webapp/view/Page12.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Page13.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover10.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover9.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover8.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover7.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover6.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover5.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover4.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover3.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover2.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/Popover1.view.xml": {
+			"entitySet": ""
+		}
+	}
+}

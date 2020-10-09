@@ -1,0 +1,13 @@
+[{
+	"ID": "KE_123456_SITE",
+	"___FK_8cd2a0223f83029712aa2480_00016": "KE_123456_SITE",
+	"SiteThingDescription": "Site Bazaar for Remington Region"
+}, {
+	"ID": "KE_542382_SITE",
+	"___FK_8cd2a0223f83029712aa2480_00016": "KE_542382_SITE",
+	"SiteThingDescription": "Site Jerry for Jerry Region"
+}, {
+	"ID": "KE_259082_SITE",
+	"___FK_8cd2a0223f83029712aa2480_00016": "KE_259082_SITE",
+	"SiteThingDescription": "Site Salvador for Hill Crest Station"
+}]

@@ -1,0 +1,495 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="328dff5074bdd1f81282a7ab" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="328dff5074bdd1f81282a7ab_Entities" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="UsersSet" EntityType="328dff5074bdd1f81282a7ab.Users" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="UsersUserGroupsUserGroups" Association="328dff5074bdd1f81282a7ab.UsersUserGroupsUserGroups" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="UsersSet" Role="FromRole_UsersUserGroupsUserGroups"/>
+					<End EntitySet="UserGroupsSet" Role="ToRole_UsersUserGroupsUserGroups"/>
+				</AssociationSet>
+				<EntitySet Name="UserGroupsSet" EntityType="328dff5074bdd1f81282a7ab.UserGroups" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="CountrySet" EntityType="328dff5074bdd1f81282a7ab.Country" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="CountryOSMOSM" Association="328dff5074bdd1f81282a7ab.CountryOSMOSM" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true">
+					<End EntitySet="CountrySet" Role="FromRole_CountryOSMOSM"/>
+					<End EntitySet="OSMSet" Role="ToRole_CountryOSMOSM"/>
+				</AssociationSet>
+				<AssociationSet Name="CountryLube_ProductsLube_Products" Association="328dff5074bdd1f81282a7ab.CountryLube_ProductsLube_Products"
+					sap:creatable="true" sap:updatable="true" sap:deletable="true">
+					<End EntitySet="CountrySet" Role="FromRole_CountryLube_ProductsLube_Products"/>
+					<End EntitySet="Lube_ProductsSet" Role="ToRole_CountryLube_ProductsLube_Products"/>
+				</AssociationSet>
+				<AssociationSet Name="CountryLPG_ProductsLPG_Products" Association="328dff5074bdd1f81282a7ab.CountryLPG_ProductsLPG_Products"
+					sap:creatable="true" sap:updatable="true" sap:deletable="true">
+					<End EntitySet="CountrySet" Role="FromRole_CountryLPG_ProductsLPG_Products"/>
+					<End EntitySet="LPG_ProductsSet" Role="ToRole_CountryLPG_ProductsLPG_Products"/>
+				</AssociationSet>
+				<EntitySet Name="OSMSet" EntityType="328dff5074bdd1f81282a7ab.OSM" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="OSMDMDM" Association="328dff5074bdd1f81282a7ab.OSMDMDM" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+					<End EntitySet="OSMSet" Role="FromRole_OSMDMDM"/>
+					<End EntitySet="DMSet" Role="ToRole_OSMDMDM"/>
+				</AssociationSet>
+				<EntitySet Name="DMSet" EntityType="328dff5074bdd1f81282a7ab.DM" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="DMTMTM" Association="328dff5074bdd1f81282a7ab.DMTMTM" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+					<End EntitySet="DMSet" Role="FromRole_DMTMTM"/>
+					<End EntitySet="TMSet" Role="ToRole_DMTMTM"/>
+				</AssociationSet>
+				<EntitySet Name="TMSet" EntityType="328dff5074bdd1f81282a7ab.TM" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="TMSiteSite" Association="328dff5074bdd1f81282a7ab.TMSiteSite" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true">
+					<End EntitySet="TMSet" Role="FromRole_TMSiteSite"/>
+					<End EntitySet="SiteSet" Role="ToRole_TMSiteSite"/>
+				</AssociationSet>
+				<EntitySet Name="SiteSet" EntityType="328dff5074bdd1f81282a7ab.Site" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="SiteTanksTanksThing" Association="328dff5074bdd1f81282a7ab.SiteTanksTanksThing" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="SiteSet" Role="FromRole_SiteTanksTanksThing"/>
+					<End EntitySet="TanksThingSet" Role="ToRole_SiteTanksTanksThing"/>
+				</AssociationSet>
+				<AssociationSet Name="SiteLubesLubesThing" Association="328dff5074bdd1f81282a7ab.SiteLubesLubesThing" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="SiteSet" Role="FromRole_SiteLubesLubesThing"/>
+					<End EntitySet="LubesThingSet" Role="ToRole_SiteLubesLubesThing"/>
+				</AssociationSet>
+				<AssociationSet Name="SiteLPGLPGThing" Association="328dff5074bdd1f81282a7ab.SiteLPGLPGThing" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true">
+					<End EntitySet="SiteSet" Role="FromRole_SiteLPGLPGThing"/>
+					<End EntitySet="LPGThingSet" Role="ToRole_SiteLPGLPGThing"/>
+				</AssociationSet>
+				<AssociationSet Name="SiteSurveySurveyThing" Association="328dff5074bdd1f81282a7ab.SiteSurveySurveyThing" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="SiteSet" Role="FromRole_SiteSurveySurveyThing"/>
+					<End EntitySet="SurveyThingSet" Role="ToRole_SiteSurveySurveyThing"/>
+				</AssociationSet>
+				<AssociationSet Name="SiteSIteThingSIteThing" Association="328dff5074bdd1f81282a7ab.SiteSIteThingSIteThing" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="SiteSet" Role="FromRole_SiteSIteThingSIteThing"/>
+					<End EntitySet="SIteThingSet" Role="ToRole_SiteSIteThingSIteThing"/>
+				</AssociationSet>
+				<EntitySet Name="TanksThingSet" EntityType="328dff5074bdd1f81282a7ab.TanksThing" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Unassigned_sitesSet" EntityType="328dff5074bdd1f81282a7ab.Unassigned_sites" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Unassigned_TanksSet" EntityType="328dff5074bdd1f81282a7ab.Unassigned_Tanks" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="User_OnboardingSet" EntityType="328dff5074bdd1f81282a7ab.User_Onboarding" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="PlatformSet" EntityType="328dff5074bdd1f81282a7ab.Platform" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<AssociationSet Name="PlatformCountryCountry" Association="328dff5074bdd1f81282a7ab.PlatformCountryCountry" sap:creatable="true"
+					sap:updatable="true" sap:deletable="true">
+					<End EntitySet="PlatformSet" Role="FromRole_PlatformCountryCountry"/>
+					<End EntitySet="CountrySet" Role="ToRole_PlatformCountryCountry"/>
+				</AssociationSet>
+				<EntitySet Name="LubesThingSet" EntityType="328dff5074bdd1f81282a7ab.LubesThing" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="LPGThingSet" EntityType="328dff5074bdd1f81282a7ab.LPGThing" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="SurveyThingSet" EntityType="328dff5074bdd1f81282a7ab.SurveyThing" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="SIteThingSet" EntityType="328dff5074bdd1f81282a7ab.SIteThing" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Unassigned_LubesSet" EntityType="328dff5074bdd1f81282a7ab.Unassigned_Lubes" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Unassigned_LPGSet" EntityType="328dff5074bdd1f81282a7ab.Unassigned_LPG" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Unassigned_SurveysSet" EntityType="328dff5074bdd1f81282a7ab.Unassigned_Surveys" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="Lube_ProductsSet" EntityType="328dff5074bdd1f81282a7ab.Lube_Products" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="LPG_ProductsSet" EntityType="328dff5074bdd1f81282a7ab.LPG_Products" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+			</EntityContainer>
+			<EntityType Name="Users">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="userName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FirstName"/>
+				<Property Name="familyName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LastName"/>
+				<Property Name="displayName1" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LoginName"/>
+				<Property Name="emails" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email"/>
+				<Property Name="active" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+				<Property Name="resetPassword" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Reset_Password"/>
+				<Property Name="passwordStatus" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Password_Configured"/>
+				<Property Name="passwordFailedLoginAttempts" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Password_Failed_Attempts"/>
+				<Property Name="passwordLocked" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Password_Locked"/>
+				<Property Name="Email_Sent" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email_Sent"/>
+				<Property Name="mailVerified" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email_Verified"/>
+				<Property Name="PNumber" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PNumber"/>
+				<Property Name="Last_Logon" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date"
+					sap:label="Last_Logon"/>
+				<NavigationProperty Name="UserGroups" Relationship="328dff5074bdd1f81282a7ab.UsersUserGroupsUserGroups"
+					FromRole="FromRole_UsersUserGroupsUserGroups" ToRole="ToRole_UsersUserGroupsUserGroups"/>
+			</EntityType>
+			<Association Name="UsersUserGroupsUserGroups">
+				<End Type="328dff5074bdd1f81282a7ab.Users" Multiplicity="1" Role="FromRole_UsersUserGroupsUserGroups"/>
+				<End Type="328dff5074bdd1f81282a7ab.UserGroups" Multiplicity="*" Role="ToRole_UsersUserGroupsUserGroups"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_UsersUserGroupsUserGroups">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_UsersUserGroupsUserGroups">
+						<PropertyRef Name="___FK_447d97faa7bb957f129101f5_00010"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="UserGroups">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_447d97faa7bb957f129101f5_00010" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_447d97faa7bb957f129101f5_00010"/>
+				<Property Name="UserGroup" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UserGroup"/>
+				<Property Name="description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UserGroupDesc"/>
+			</EntityType>
+			<EntityType Name="Country">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="CountryName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CountryName"/>
+				<Property Name="___FK_89a42df9dabd543c12a23d03_00003" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_89a42df9dabd543c12a23d03_00003"/>
+				<NavigationProperty Name="OSM" Relationship="328dff5074bdd1f81282a7ab.CountryOSMOSM" FromRole="FromRole_CountryOSMOSM"
+					ToRole="ToRole_CountryOSMOSM"/>
+				<NavigationProperty Name="Lube_Products" Relationship="328dff5074bdd1f81282a7ab.CountryLube_ProductsLube_Products"
+					FromRole="FromRole_CountryLube_ProductsLube_Products" ToRole="ToRole_CountryLube_ProductsLube_Products"/>
+				<NavigationProperty Name="LPG_Products" Relationship="328dff5074bdd1f81282a7ab.CountryLPG_ProductsLPG_Products"
+					FromRole="FromRole_CountryLPG_ProductsLPG_Products" ToRole="ToRole_CountryLPG_ProductsLPG_Products"/>
+			</EntityType>
+			<Association Name="CountryOSMOSM">
+				<End Type="328dff5074bdd1f81282a7ab.Country" Multiplicity="1" Role="FromRole_CountryOSMOSM"/>
+				<End Type="328dff5074bdd1f81282a7ab.OSM" Multiplicity="*" Role="ToRole_CountryOSMOSM"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CountryOSMOSM">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_CountryOSMOSM">
+						<PropertyRef Name="___FK_87fdcd323c89cc37129505d1_00006"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CountryLube_ProductsLube_Products">
+				<End Type="328dff5074bdd1f81282a7ab.Country" Multiplicity="1" Role="FromRole_CountryLube_ProductsLube_Products"/>
+				<End Type="328dff5074bdd1f81282a7ab.Lube_Products" Multiplicity="*" Role="ToRole_CountryLube_ProductsLube_Products"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CountryLube_ProductsLube_Products">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_CountryLube_ProductsLube_Products">
+						<PropertyRef Name="___FK_c66f8cb34e6ec93b12b4a78c_00003"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="CountryLPG_ProductsLPG_Products">
+				<End Type="328dff5074bdd1f81282a7ab.Country" Multiplicity="1" Role="FromRole_CountryLPG_ProductsLPG_Products"/>
+				<End Type="328dff5074bdd1f81282a7ab.LPG_Products" Multiplicity="*" Role="ToRole_CountryLPG_ProductsLPG_Products"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_CountryLPG_ProductsLPG_Products">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_CountryLPG_ProductsLPG_Products">
+						<PropertyRef Name="___FK_c66f8cb34e6ec93b12b4a78c_00018"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="OSM">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_87fdcd323c89cc37129505d1_00006" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_87fdcd323c89cc37129505d1_00006"/>
+				<Property Name="OSM_Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="OSM_Name"/>
+				<NavigationProperty Name="DM" Relationship="328dff5074bdd1f81282a7ab.OSMDMDM" FromRole="FromRole_OSMDMDM" ToRole="ToRole_OSMDMDM"/>
+			</EntityType>
+			<Association Name="OSMDMDM">
+				<End Type="328dff5074bdd1f81282a7ab.OSM" Multiplicity="1" Role="FromRole_OSMDMDM"/>
+				<End Type="328dff5074bdd1f81282a7ab.DM" Multiplicity="*" Role="ToRole_OSMDMDM"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_OSMDMDM">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_OSMDMDM">
+						<PropertyRef Name="___FK_87fdcd323c89cc37129505d1_00011"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="DM">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_87fdcd323c89cc37129505d1_00011" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_87fdcd323c89cc37129505d1_00011"/>
+				<Property Name="DMName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DMName"/>
+				<NavigationProperty Name="TM" Relationship="328dff5074bdd1f81282a7ab.DMTMTM" FromRole="FromRole_DMTMTM" ToRole="ToRole_DMTMTM"/>
+			</EntityType>
+			<Association Name="DMTMTM">
+				<End Type="328dff5074bdd1f81282a7ab.DM" Multiplicity="1" Role="FromRole_DMTMTM"/>
+				<End Type="328dff5074bdd1f81282a7ab.TM" Multiplicity="*" Role="ToRole_DMTMTM"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_DMTMTM">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_DMTMTM">
+						<PropertyRef Name="___FK_87fdcd323c89cc37129505d1_00016"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="TM">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_87fdcd323c89cc37129505d1_00016" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_87fdcd323c89cc37129505d1_00016"/>
+				<NavigationProperty Name="Site" Relationship="328dff5074bdd1f81282a7ab.TMSiteSite" FromRole="FromRole_TMSiteSite" ToRole="ToRole_TMSiteSite"/>
+			</EntityType>
+			<Association Name="TMSiteSite">
+				<End Type="328dff5074bdd1f81282a7ab.TM" Multiplicity="1" Role="FromRole_TMSiteSite"/>
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="*" Role="ToRole_TMSiteSite"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_TMSiteSite">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_TMSiteSite">
+						<PropertyRef Name="___FK_67de77bbc4df79be12b393bf_00009"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="Site">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="SiteDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="SiteDescription"/>
+				<Property Name="___FK_67de77bbc4df79be12b393bf_00009" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_67de77bbc4df79be12b393bf_00009"/>
+				<NavigationProperty Name="Tanks" Relationship="328dff5074bdd1f81282a7ab.SiteTanksTanksThing" FromRole="FromRole_SiteTanksTanksThing"
+					ToRole="ToRole_SiteTanksTanksThing"/>
+				<NavigationProperty Name="Lubes" Relationship="328dff5074bdd1f81282a7ab.SiteLubesLubesThing" FromRole="FromRole_SiteLubesLubesThing"
+					ToRole="ToRole_SiteLubesLubesThing"/>
+				<NavigationProperty Name="LPG" Relationship="328dff5074bdd1f81282a7ab.SiteLPGLPGThing" FromRole="FromRole_SiteLPGLPGThing"
+					ToRole="ToRole_SiteLPGLPGThing"/>
+				<NavigationProperty Name="Survey" Relationship="328dff5074bdd1f81282a7ab.SiteSurveySurveyThing" FromRole="FromRole_SiteSurveySurveyThing"
+					ToRole="ToRole_SiteSurveySurveyThing"/>
+				<NavigationProperty Name="SIteThing" Relationship="328dff5074bdd1f81282a7ab.SiteSIteThingSIteThing"
+					FromRole="FromRole_SiteSIteThingSIteThing" ToRole="ToRole_SiteSIteThingSIteThing"/>
+			</EntityType>
+			<Association Name="SiteTanksTanksThing">
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="1" Role="FromRole_SiteTanksTanksThing"/>
+				<End Type="328dff5074bdd1f81282a7ab.TanksThing" Multiplicity="*" Role="ToRole_SiteTanksTanksThing"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_SiteTanksTanksThing">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_SiteTanksTanksThing">
+						<PropertyRef Name="___FK_5d4a44f540e84fca12aa222a_00003"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="SiteLubesLubesThing">
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="1" Role="FromRole_SiteLubesLubesThing"/>
+				<End Type="328dff5074bdd1f81282a7ab.LubesThing" Multiplicity="*" Role="ToRole_SiteLubesLubesThing"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_SiteLubesLubesThing">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_SiteLubesLubesThing">
+						<PropertyRef Name="___FK_8cd2a0223f83029712aa2480_00003"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="SiteLPGLPGThing">
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="1" Role="FromRole_SiteLPGLPGThing"/>
+				<End Type="328dff5074bdd1f81282a7ab.LPGThing" Multiplicity="*" Role="ToRole_SiteLPGLPGThing"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_SiteLPGLPGThing">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_SiteLPGLPGThing">
+						<PropertyRef Name="___FK_8cd2a0223f83029712aa2480_00008"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="SiteSurveySurveyThing">
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="1" Role="FromRole_SiteSurveySurveyThing"/>
+				<End Type="328dff5074bdd1f81282a7ab.SurveyThing" Multiplicity="*" Role="ToRole_SiteSurveySurveyThing"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_SiteSurveySurveyThing">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_SiteSurveySurveyThing">
+						<PropertyRef Name="___FK_8cd2a0223f83029712aa2480_00012"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="SiteSIteThingSIteThing">
+				<End Type="328dff5074bdd1f81282a7ab.Site" Multiplicity="1" Role="FromRole_SiteSIteThingSIteThing"/>
+				<End Type="328dff5074bdd1f81282a7ab.SIteThing" Multiplicity="*" Role="ToRole_SiteSIteThingSIteThing"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_SiteSIteThingSIteThing">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_SiteSIteThingSIteThing">
+						<PropertyRef Name="___FK_8cd2a0223f83029712aa2480_00016"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="TanksThing">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_5d4a44f540e84fca12aa222a_00003" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_5d4a44f540e84fca12aa222a_00003"/>
+				<Property Name="TanksThingDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="TanksThingDescription"/>
+			</EntityType>
+			<EntityType Name="Unassigned_sites">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+			</EntityType>
+			<EntityType Name="Unassigned_Tanks">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+			</EntityType>
+			<EntityType Name="User_Onboarding">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Function" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Function"/>
+				<Property Name="Value" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Value"/>
+			</EntityType>
+			<EntityType Name="Platform">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<NavigationProperty Name="Country" Relationship="328dff5074bdd1f81282a7ab.PlatformCountryCountry" FromRole="FromRole_PlatformCountryCountry"
+					ToRole="ToRole_PlatformCountryCountry"/>
+			</EntityType>
+			<Association Name="PlatformCountryCountry">
+				<End Type="328dff5074bdd1f81282a7ab.Platform" Multiplicity="1" Role="FromRole_PlatformCountryCountry"/>
+				<End Type="328dff5074bdd1f81282a7ab.Country" Multiplicity="*" Role="ToRole_PlatformCountryCountry"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_PlatformCountryCountry">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="ToRole_PlatformCountryCountry">
+						<PropertyRef Name="___FK_89a42df9dabd543c12a23d03_00003"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityType Name="LubesThing">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_8cd2a0223f83029712aa2480_00003" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_8cd2a0223f83029712aa2480_00003"/>
+				<Property Name="LubeThingDesciprtion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="LubeThingDesciprtion"/>
+			</EntityType>
+			<EntityType Name="LPGThing">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_8cd2a0223f83029712aa2480_00008" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_8cd2a0223f83029712aa2480_00008"/>
+				<Property Name="LPGThingDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="LPGThingDescription"/>
+			</EntityType>
+			<EntityType Name="SurveyThing">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_8cd2a0223f83029712aa2480_00012" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_8cd2a0223f83029712aa2480_00012"/>
+				<Property Name="SurveyThingDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="SurveyThingDescription"/>
+			</EntityType>
+			<EntityType Name="SIteThing">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_8cd2a0223f83029712aa2480_00016" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_8cd2a0223f83029712aa2480_00016"/>
+				<Property Name="SiteThingDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="SiteThingDescription"/>
+			</EntityType>
+			<EntityType Name="Unassigned_Lubes">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+			</EntityType>
+			<EntityType Name="Unassigned_LPG">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+			</EntityType>
+			<EntityType Name="Unassigned_Surveys">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+			</EntityType>
+			<EntityType Name="Lube_Products">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="___FK_c66f8cb34e6ec93b12b4a78c_00003" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_c66f8cb34e6ec93b12b4a78c_00003"/>
+				<Property Name="Product_Code" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Product_Code"/>
+				<Property Name="Product_Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Product_Name"/>
+				<Property Name="Active" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Active"/>
+				<Property Name="Unit_Of_Measure" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="wewg"/>
+				<Property Name="Unit_Volume" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Unit_Volume"/>
+				<Property Name="Alternate_Unit_Of_Measure" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Alternate_Unit_Of_Measure"/>
+			</EntityType>
+			<EntityType Name="LPG_Products">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Product_Code" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Product_Code"/>
+				<Property Name="Product_Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Product_Name"/>
+				<Property Name="Active" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Active"/>
+				<Property Name="___FK_c66f8cb34e6ec93b12b4a78c_00018" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="___FK_c66f8cb34e6ec93b12b4a78c_00018"/>
+				<Property Name="Unit_Of_Measure" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Unit_Of_Measure"/>
+				<Property Name="Unit_Volume" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Unit_Volume"/>
+				<Property Name="Alternate_Unit_Of_Measure1" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="ALternate_Unit_Of_Measure"/>
+				<Property Name="Alternate_Unit_Volume" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="Alternate_Unit_Volume"/>
+			</EntityType>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

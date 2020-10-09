@@ -1,0 +1,37 @@
+[{
+	"ID": "KE_123456_LPG0464",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_123456_SITE",
+	"LPGThingDescription": "LPG Bazaar for Remington Region"
+}, {
+	"ID": "KE_123456_LPG0163",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_123456_SITE",
+	"LPGThingDescription": "LPG Bazaar for Remington Region"
+}, {
+	"ID": "KE_123456_LPG0436",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_123456_SITE",
+	"LPGThingDescription": "LPG Bazaar for Remington Region"
+}, {
+	"ID": "KE_542382_LPG0351",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_542382_SITE",
+	"LPGThingDescription": "LPG Jerry for Jerry Region"
+}, {
+	"ID": "KE_542382_LPG0413",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_542382_SITE",
+	"LPGThingDescription": "LPG Jerry for Jerry Region"
+}, {
+	"ID": "KE_542382_LPG0309",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_542382_SITE",
+	"LPGThingDescription": "LPG Jerry for Jerry Region"
+}, {
+	"ID": "KE_259082_LPG0352",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_259082_SITE",
+	"LPGThingDescription": "LPG Salvador for Hill Crest Station"
+}, {
+	"ID": "KE_259082_LPG0636",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_259082_SITE",
+	"LPGThingDescription": "LPG Salvador for Hill Crest Station"
+}, {
+	"ID": "KE_259082_LPG0361",
+	"___FK_8cd2a0223f83029712aa2480_00008": "KE_259082_SITE",
+	"LPGThingDescription": "LPG Salvador for Hill Crest Station"
+}]

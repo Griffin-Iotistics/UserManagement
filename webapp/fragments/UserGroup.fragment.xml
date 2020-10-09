@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleGroupDialogConfirm">
+		<groupItems>
+			<ViewSettingsItem text="{i18n>email}" key="emails/0/value" selected="true" />
+			<ViewSettingsItem text="{i18n>userId}" key="id" />
+			<ViewSettingsItem text="{i18n>lastName}" key="name/familyName" />
+			<ViewSettingsItem text="{i18n>loginName}" key="displayName" />
+		</groupItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
+
+

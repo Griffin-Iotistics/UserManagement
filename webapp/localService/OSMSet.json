@@ -1,0 +1,13 @@
+[{
+	"ID": "KE_OS101",
+	"___FK_87fdcd323c89cc37129505d1_00006": "Kenya",
+	"OSM_Name": ""
+}, {
+	"ID": "UG_OS101",
+	"___FK_87fdcd323c89cc37129505d1_00006": "Uganda",
+	"OSM_Name": ""
+}, {
+	"ID": "MA_OS101",
+	"___FK_87fdcd323c89cc37129505d1_00006": "Morocco",
+	"OSM_Name": ""
+}]

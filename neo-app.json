@@ -1,0 +1,74 @@
+{
+	"welcomeFile": "webapp/test/testFLPService.html",
+	"routes": [{
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"version": "1.60.8",
+			"preferLocal": true,
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"version": "1.60.8",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/VIVOIDP",
+		"target": {
+			"type": "destination",
+			"name": "VIVOIDP"
+		},
+		"description": "Vivo IDP"
+	}, {
+		"path": "/VIVOIDP_T0",
+		"target": {
+			"type": "destination",
+			"name": "VIVOIDP_T0"
+		},
+		"description": "Vivo IDP"
+	}, {
+		"path": "/USERAPI",
+		"target": {
+			"type": "service",
+			"name": "userapi"
+		},
+		"description": "User API"
+	}, {
+		"path": "/SITE_CONFIG",
+		"target": {
+			"type": "destination",
+			"name": "SITE_CONFIG"
+		},
+		"description": "Site Master"
+	},{
+		"path": "/UserMicroService",
+		"target": {
+			"type": "destination",
+			"name": "UserMicroService"
+		},
+		"description": "User Micro Service"
+	},{
+		"path": "/SiteUpdateMicroService",
+		"target": {
+			"type": "destination",
+			"name": "SiteUpdateMicroService"
+		},
+		"description": "Site Update Micro Service"
+	}, {
+		"path": "/QualtricsMailingList",
+		"target": {
+			"type": "destination",
+			"name": "QualtricsMailingList"
+		},
+		"description": "Qualtrics Mailing List Micro Service"
+	}],
+	"authenticationMethod": "none",
+	"sendWelcomeFileRedirect": true
+}

@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<ResponsivePopover contentHeight="auto" contentWidth="auto" horizontalScrolling="true" modal="false" offsetX="0" offsetY="0"
+		placement="Right" showHeader="true" title="{i18n>selectGroup}" verticalScrolling="true" visible="true" showCloseButton="true">
+		<SearchField liveChange="_onSearch" width="100%"/>
+		<List id="groupListId" items="{userGroupsAll>/groupsAll}" mode="SingleSelectLeft" selectionChange="_onGroupSelect" growing="true"
+			growingScrollToLoad="true" growingThreshold="20">
+			<StandardListItem title="{userGroupsAll>name}" description="{userGroupsAll>display_name}" type="{userGroupsAll>type}"
+				highlight="{= ${userGroupsAll>type} === 'Inactive' ? 'Error': 'None'}" iconInset="false" visible="{userGroupsAll>visible}"/>
+			<!--type="{= ${userGroupsAll>visible} ? 'Active' : 'Inactive' } visible="{userGroupsAll>visible}""-->
+		</List>
+		<beginButton>
+			<Button text="{i18n>assign}" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onUserAssignSave"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>cancel}" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="_onUserAssignCancel"/>
+		</endButton>
+	</ResponsivePopover>
+</core:FragmentDefinition>

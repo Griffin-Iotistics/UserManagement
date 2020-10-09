@@ -1,0 +1,82 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.usr.managementv2.controller.UserDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:table="sap.ui.table">
+	<Page showHeader="true" title="{displayName1}" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+		<content>
+			<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+				selectedKey="Ok">
+				<items>
+					<IconTabFilter id="userDetailsId" icon="sap-icon://hint" iconColor="Default" text="User Details" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<!--<Panel >-->
+						<!--</Panel>-->
+					</IconTabFilter>
+					<IconTabSeparator icon="" iconDensityAware="false"/>
+					<IconTabFilter icon="sap-icon://locked" iconColor="Default" text="Authentication" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<VBox >
+								<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+									labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+									singleContainerFullSize="false" ariaLabelledBy="Title1">
+									<f:content>
+										<Label text="{i18n>ueserPassword}"/>
+										<Button icon="sap-icon://notes" press="_onSetInitial" text="{i18n>sendResetMail}" tooltip="{i18n>sendResetMail}" type="Emphasized" width="auto"
+											enabled="{= ${ui>/editVisible}?false:true}" visible="true" iconDensityAware="false"/>
+										<Button icon="sap-icon://notes" press="_onResetPassword" text="{i18n>resetPassword}" tooltip="{i18n>resetPassword}" type="Emphasized" width="auto"
+											enabled="{= ${ui>/editVisible}?false:true}" visible="false" iconDensityAware="false"/>
+										<Label text="{i18n>passwordConfig}"/>
+										<Text text="{/userDetails/name/familyName}" visible="false"/>
+										<Label text="{i18n>lastLogOn}"/>
+										<Text text="{/userDetails/loginTime}"/>
+										<Label text="{i18n>passwordFailedAttempts}"/>
+										<Text text="{/userDetails/passwordFailedLoginAttempts}"/>
+										<Label text="{i18n>passwordStatus}"/>
+										<Text text="{/userDetails/passwordStatus}"/>
+										<Label text="{i18n>emailSent}"/>
+										<Text text="{/userDetails/passwordStatus}" visible="false"/>
+										<Label text="{i18n>emailVarified}"/>
+										<Text text="{/userDetails/mailVerified}"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator icon="" iconDensityAware="false"/>
+					<IconTabFilter icon="sap-icon://notes" iconColor="Default" text="Authorization" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<List id="groupId" items="{/userDetails/groups}" mode="{ui>/listDeleteMode}" delete="_onGroupDelete">
+								<headerToolbar>
+									<OverflowToolbar>
+										<ToolbarSpacer/>
+										<Label text="{i18n>assignUserGroup}"/>
+										<Button type="Emphasized" icon="sap-icon://add" text="{i18n>assign}" enabled="{= ${ui>/editVisible}?false:true}" press="_onGroupAssignPress"/>
+									</OverflowToolbar>
+								</headerToolbar>
+								<items>
+									<StandardListItem title="{value}" description="{display}" iconDensityAware="false" iconInset="false"/>
+								</items>
+							</List>
+						</content>
+					</IconTabFilter>
+				</items>
+				<content/>
+			</IconTabBar>
+		</content>
+		<footer>
+			<OverflowToolbar visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="{i18n>edit}" type="Emphasized" icon="sap-icon://user-edit" iconFirst="true" width="auto" enabled="true"
+						visible="{ui>/editVisible}" iconDensityAware="false" press="_onUserEdit"/>
+					<Button text="{i18n>delete}" type="Reject" icon="sap-icon://delete" iconFirst="true" width="auto" enabled="true"
+						visible="{= ${ui>/editVisible}?false:true}" tooltip="Delete selected users" iconDensityAware="false" press="_onUserDelete"/>
+					<Button text="{i18n>save}" type="Emphasized" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true"
+						visible="{= ${ui>/editVisible}?false:true}" iconDensityAware="false" press="_onUserEditSave"/>
+					<Button text="{i18n>cancel}" type="Default" icon="sap-icon://sys-cancel-2" iconFirst="true" width="auto" enabled="true"
+						visible="{= ${ui>/editVisible}?false:true}" iconDensityAware="false" press="_onUserEditCancel"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
