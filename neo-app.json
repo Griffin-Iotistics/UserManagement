@@ -20,10 +20,10 @@
 		},
 		"description": "SAPUI5 Test Resources"
 	}, {
-		"path": "/VIVOIDP",
+		"path": "/IDP-Auth",
 		"target": {
 			"type": "destination",
-			"name": "VIVOIDP"
+			"name": "AdaptIT-IDP-Auth"
 		},
 		"description": "Vivo IDP"
 	}, {
